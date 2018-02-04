@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool>
+	<alias>bmsdbv2</alias>
+	<driver-url>jdbc:sqlserver://127.0.0.1:1433;DatabaseName=Test2</driver-url>
+
+	<driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+	<driver-properties>
+		<property name="user" value="sa" />
+		<property name="password" value="xxc123456" />
+	</driver-properties>
+	
+	<prototype-count>2</prototype-count>
+	<minimum-connection-count>2</minimum-connection-count>
+	<maximum-connection-count>40</maximum-connection-count>
+	
+	<simultaneous-build-throttle>20</simultaneous-build-throttle>
+	
+	<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+	
+	<test-before-use>true</test-before-use>
+	<house-keeping-test-sql>select 1</house-keeping-test-sql>
+</proxool>
